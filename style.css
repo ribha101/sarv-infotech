@@ -1,37 +1,156 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.calculator {
-    width: 300px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-}
-
-#display {
-    width: 100%;
-    height: 50px;
-    font-size: 24px;
-    margin-bottom: 15px;
-    text-align: right;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #333;
 }
 
-button {
-    padding: 15px;
+/* Header */
+header {
+    background-color: #1f3c5b;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* Main container */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #1f3c5b;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.hero img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 5px solid #e3e8ed;
+}
+
+.hero h2 {
+    text-align: left;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #f4f6f8;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #1f3c5b;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #1f3c5b;
+}
+
+/* Achievements */
+ul {
+    max-width: 700px;
+    margin: auto;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+/* Legacy section */
+.quote {
+    text-align: center;
+    background-color: #e8eef3;
+}
+
+.quote p {
     font-size: 18px;
-    cursor: pointer;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #1f3c5b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        text-align: center;
+    }
+
+    .hero img {
+        width: 200px;
+        height: 240px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 20px;
+    }
 }
